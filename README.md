@@ -57,7 +57,7 @@ And then entering in your password. Now you will be running commands as the admi
 `.bashrc` is a file containing instructions for prefixes in the command line. You can add new ones easily, by just adding a new line like this:
 
 ```bashrc
-alias cls='clear'.
+alias cls='clear'
 ```
 
 This allows you to type in cls to run the clear command. You can do the same with longer commands, therefore expediting the process of running scans, or compiling files.
