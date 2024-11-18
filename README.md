@@ -20,6 +20,8 @@ To install it via WSL, open up your Command Prompt (CMD), and type:
 wsl --install -d kali-linux
 ```
 
+![1Artboard 1msstore-header-smalller](https://github.com/user-attachments/assets/c8215bb0-b0d9-4ff4-803b-755950b68be0)
+
 #### Microsoft Store
 
 Kali Linux can also be downloaded from the Microsoft store. Search up Kali Linux, and download the app. You are done!
