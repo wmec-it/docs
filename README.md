@@ -56,7 +56,7 @@ And then entering in your password. Now you will be running commands as the admi
 
 - `cd`: Move directories
 - `ls`: List all files and folders in the current directory
-
+- `mkdir`: Make directory
 
 ### Misc
 	
