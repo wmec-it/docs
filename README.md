@@ -2,9 +2,9 @@
 
 # Docs
 
-![1Artboard 1kali-header-small](https://github.com/user-attachments/assets/e2ed2fc0-afc1-48ab-8dba-829f7777bf69)
-
 ## Kali Linux
+
+![1Artboard 1kali-header-small](https://github.com/user-attachments/assets/e2ed2fc0-afc1-48ab-8dba-829f7777bf69)
 
 Kali Linux is a very widely used operating system for penetration testing, OSINT, and cyber security in general. Although, like all other linux systems, it is not as user friendly as Windows, or MacOS. We will be learning about it in class, or we may have already learned about it. But Here are gonna be some tips and stuff that I thought I should put on here.	
 
@@ -14,15 +14,17 @@ Installing Kali Linux is very easy, especially if you are using a Windows machin
 
 #### WSL
 
+![1Artboard 1wsl-header-smalller](https://github.com/user-attachments/assets/90cb24fd-7073-4583-a193-5c31aaa03559)
+
 To install it via WSL, open up your Command Prompt (CMD), and type:
 
 ```powershell
 wsl --install -d kali-linux
 ```
 
-![1Artboard 1msstore-header-smalller](https://github.com/user-attachments/assets/c8215bb0-b0d9-4ff4-803b-755950b68be0)
-
 #### Microsoft Store
+
+![1Artboard 1msstore-header-smalller](https://github.com/user-attachments/assets/c8215bb0-b0d9-4ff4-803b-755950b68be0)
 
 Kali Linux can also be downloaded from the Microsoft store. Search up Kali Linux, and download the app. You are done!
 
