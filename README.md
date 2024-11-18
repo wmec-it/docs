@@ -18,7 +18,7 @@ Installing Kali Linux is very easy, especially if you are using a Windows machin
 
 To install it via WSL, open up your Command Prompt (CMD), and type:
 
-```powershell
+```sh
 wsl --install -d kali-linux
 ```
 
