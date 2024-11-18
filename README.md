@@ -14,7 +14,7 @@ Installing Kali Linux is very easy, especially if you are using a Windows machin
 
 #### WSL
 
-![1Artboard 1wsl-header-smalller](https://github.com/user-attachments/assets/90cb24fd-7073-4583-a193-5c31aaa03559)
+![wsl-header-smalller](https://github.com/user-attachments/assets/90cb24fd-7073-4583-a193-5c31aaa03559)
 
 To install it via WSL, open up your Command Prompt (CMD), and type:
 
