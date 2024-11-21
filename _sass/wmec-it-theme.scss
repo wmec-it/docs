@@ -69,8 +69,6 @@ a:hover {
 
 /* Improved Code Blocks */
 code, pre {
-  background-color: var(--code-bg);
-  border-radius: 6px;
   font-family: 
     'Cascadia Code', 
     'Fira Code', 
@@ -78,6 +76,11 @@ code, pre {
     'Courier New', 
     monospace;
   font-size: 0.9rem;
+}
+
+.highlighter-rouge, pre {
+  background-color: var(--code-bg);
+  border-radius: 6px;
 }
 
 pre {
