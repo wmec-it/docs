@@ -142,3 +142,11 @@ blockquote {
 img {
   max-width: 100%;
 }
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
