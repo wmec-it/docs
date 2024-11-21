@@ -161,15 +161,14 @@ blockquote {
   flex-direction: row;
   gap: 10px;
   list-style: none;
-  li {
-    a {
-      padding: 10px 20px;
-      cursor: pointer;
-      outline: 1px solid var(--border-color);
-      color: var(--accent-color);
-      background var(--code-bg);
-    }
-  }
+}
+
+.downloads li a {
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: 1px solid var(--border-color);
+  color: var(--accent-color);
+  background var(--code-bg);
 }
 
 .highlight {
