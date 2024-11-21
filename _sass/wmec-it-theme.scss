@@ -5,7 +5,7 @@
   --text-secondary: #A0A0A0;
   --accent-color: #F57E20;
   --border-color: #666666;
-  --code-bg: #4F4F4F;
+  --code-bg: #3B3B3B;
 }
 
 body {
@@ -152,6 +152,24 @@ blockquote {
   padding-left: 1rem;
   font-style: italic;
   color: var(--text-secondary);
+}
+
+.downloads {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+  li {
+    a {
+      padding: 10px 20px;
+      cursor: pointer;
+      outline: 1px solid var(--border-color);
+      color: var(--accent-color);
+      background var(--code-bg);
+    }
+  }
 }
 
 .highlight {
