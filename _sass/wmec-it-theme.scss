@@ -9,6 +9,11 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: 
@@ -23,9 +28,12 @@ body {
     "Helvetica Neue", 
     sans-serif;
   line-height: 1.6;
-  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.wrapper {
+  max-width: 900px;
 }
 
 /* Improved Typography */
