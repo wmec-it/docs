@@ -1,4 +1,185 @@
 ---
 ---
 
-@import "wmec-it-theme"
+@import "{{ site.theme }}";
+
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1E1E1E;
+  --text-primary: #E0E0E0;
+  --text-secondary: #A0A0A0;
+  --accent-color: #F57E20;
+  --border-color: #666666;
+  --code-bg: #3B3B3B;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 
+    -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen, 
+    Ubuntu, 
+    Cantarell, 
+    "Open Sans", 
+    "Helvetica Neue", 
+    sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.wrapper {
+  max-width: 900px;
+}
+
+/* Improved Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 { 
+  font-size: 2.5rem; 
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+h2 { 
+  font-size: 2rem; 
+  color: var(--accent-color);
+}
+
+/* Enhanced Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color) 80%, white);
+  text-decoration: underline;
+}
+
+/* Improved Code Blocks */
+code, pre {
+  font-family: 
+    'Cascadia Code', 
+    'Fira Code', 
+    Consolas, 
+    'Courier New', 
+    monospace;
+  font-size: 0.9rem;
+}
+
+.highlighter-rouge, pre {
+  background-color: var(--code-bg);
+  border-radius: 6px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  margin: 0 0.2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Enhanced Tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
+
+/* Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+/* Additional Subtle Effects */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.downloads {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+}
+
+.downloads li a {
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: 1px solid var(--border-color);
+  color: var(--accent-color);
+  background var(--code-bg);
+}
+
+.highlight {
+  code {
+    .nt {
+      color: #1FA0E1;
+    }
+  }
+}
