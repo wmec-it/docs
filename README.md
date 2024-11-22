@@ -32,6 +32,28 @@ Kali Linux can also be downloaded from the Microsoft store. Search up Kali Linux
 
 Using software of your choice (vmware, virtualbox, etc.), you can download the ISO file from Kali Downloads, or you can get the full Virtual Machine already built from Kali Virtual Machines.
 
+##### Downloads
+
+- [vmware](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z)
+
+- [vmware TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z.torrent)
+
+- [VirtualBox](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-virtualbox-amd64.7z)
+
+- [VirtualBox TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-virtualbox-amd64.7z.torrent)
+
+- [Hyper-V](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-hyperv-amd64.7z)
+
+- [Hyper-V TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-hyperv-amd64.7z.torrent)
+
+- [QEMU](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-qemu-amd64.7z)
+
+- [QEMU TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-qemu-amd64.7z.torrent)
+
+If none of those work, here is the downloads page where they are listed.
+
+[Kali Downloads Page](https://www.kali.org/get-kali/#kali-platforms)
+
 ### Command Line
 
 The command line is the main area of which Kali Linux is operated, and you should get familiar with it.
@@ -40,6 +62,12 @@ The command line is the main area of which Kali Linux is operated, and you shoul
 
 Kali Linux has its own packages like every other Linux distribution, and stores the URLs to the server inside of your `sources.list` file (don’t need to worry about this). Kali Linux lists their packages on their main website here.
 To install these packages, you need to use `apt install package-name` or `apt-get install package-name`. They will sometimes prompt you to say y/n to a question. To bypass this, add `-y` to the end of your command.
+
+#### Search
+
+Finding Kali packages are easy, since they are all listed on the official [tools](https://www.kali.org/tools/) page of the [Kali website](https://www.kali.org/)
+
+You can also add package repositories to your `sources.list` file. This allows you to get packages from other sources such as Ubuntu's packages.
 
 ### Sudo
 
@@ -57,6 +85,30 @@ And then entering in your password. Now you will be running commands as the admi
 - `cd`: Move directories
 - `ls`: List all files and folders in the current directory
 - `mkdir`: Make directory
+
+### NetHunter
+
+NetHunter is basically Kali linux made for mobile devices.
+
+#### Installation
+
+1. Install [Tow-Bootloader](https://wiki.pine64.org/wiki/PinePhone_Installation_Instructions#Using_Tow-Boot) on your device
+   
+2. Write the image to your MicroSD card, e.g.
+   
+   ```sh
+   sudo dd if=IMAGE.img of=/dev/[DEVICE] bs=1M status=progress conv=fsync
+   ```
+   
+3. Insert the MicroSD card into your device
+   
+4. Boot your device from MicroSD card (hold Volume down key until the LED turns blue
+   
+5. Login with user "kali" and password "1234"
+
+### Bugs
+
+[Bug Tracker](https://bugs.kali.org/view_all_bug_page.php?filter=6740a6fac2841)
 
 ### Misc
 	
