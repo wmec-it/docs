@@ -65,7 +65,7 @@ To install these packages, you need to use `apt install package-name` or `apt-ge
 
 #### Search
 
-Finding Kali packages are easy, since they are all listed on the official [tools](https://www.kali.org/tools/) page of the [Kali website](https://www.kali.org/)
+Finding Kali packages are easy, since they are all listed on the official [tools](https://www.kali.org/tools/) page of the [Kali website](https://www.kali.org/).
 
 You can also add package repositories to your `sources.list` file. This allows you to get packages from other sources such as Ubuntu's packages.
 
@@ -92,7 +92,7 @@ NetHunter is basically Kali linux made for mobile devices.
 
 #### Installation
 
-1. Install [Tow-Bootloader](https://wiki.pine64.org/wiki/PinePhone_Installation_Instructions#Using_Tow-Boot) on your device
+1. Install [Tow-Bootloader](https://wiki.pine64.org/wiki/PinePhone_Installation_Instructions#Using_Tow-Boot) on your device.
    
 2. Write the image to your MicroSD card, e.g.
    
@@ -100,11 +100,11 @@ NetHunter is basically Kali linux made for mobile devices.
    sudo dd if=IMAGE.img of=/dev/[DEVICE] bs=1M status=progress conv=fsync
    ```
    
-3. Insert the MicroSD card into your device
+3. Insert the MicroSD card into your device.
    
-4. Boot your device from MicroSD card (hold Volume down key until the LED turns blue
+4. Boot your device from MicroSD card (hold Volume down key until the LED turns blue).
    
-5. Login with user "kali" and password "1234"
+5. Login with user `kali` and password `1234`.
 
 ### Bugs
 
