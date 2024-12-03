@@ -54,9 +54,24 @@ If none of those work, here is the downloads page where they are listed.
 
 [Kali Downloads Page](https://www.kali.org/get-kali/#kali-platforms)
 
+---
+
 ### Command Line
 
 The command line is the main area of which Kali Linux is operated, and you should get familiar with it.
+
+#### Sudo
+
+Sudo is a command used on every Linux distribution. Sudo gives the command you are running administrative privileges. Running `sudo your-command` will elevate it, and run without restrictions. Adding this to the package commands from before, it would look like this: `sudo apt-get install package-name -y`.
+Another use for sudo is elevating every command you run. This can be done by running:
+
+```bashrc
+sudo su
+```
+
+And then entering in your password. Now you will be running commands as the administrator, instead of just a user.
+
+---
 
 ### Packages
 
@@ -69,16 +84,7 @@ Finding Kali packages are easy, since they are all listed on the official [tools
 
 You can also add package repositories to your `sources.list` file. This allows you to get packages from other sources such as Ubuntu's packages.
 
-### Sudo
-
-Sudo is a command used on every Linux distribution. Sudo gives the command you are running administrative privileges. Running `sudo your-command` will elevate it, and run without restrictions. Adding this to the package commands from before, it would look like this: `sudo apt-get install package-name -y`.
-Another use for sudo is elevating every command you run. This can be done by running:
-
-```bashrc
-sudo su
-```
-
-And then entering in your password. Now you will be running commands as the administrator, instead of just a user.
+---
 
 ### Errors / Debugging / Issues
 
@@ -120,11 +126,15 @@ exit
 
 Or just manually restart it if both commands do not work.
 
+---
+
 ### Common Commands
 
 - `cd`: Move directories
 - `ls`: List all files and folders in the current directory
 - `mkdir`: Make directory
+
+---
 
 ### NetHunter
 
@@ -146,9 +156,13 @@ NetHunter is basically Kali linux made for mobile devices.
    
 5. Login with user `kali` and password `1234`.
 
+---
+
 ### Bugs
 
 [Bug Tracker](https://bugs.kali.org/view_all_bug_page.php?filter=6740a6fac2841)
+
+---
 
 ### Misc
 	
