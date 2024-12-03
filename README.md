@@ -128,6 +128,16 @@ Or just manually restart it if both commands do not work.
 
 ---
 
+### VPN
+
+#### OpenVPN
+
+##### Proton VPN
+
+[Geeks for Geeks tutorial](https://www.geeksforgeeks.org/virtual-private-network-vpn-setup-in-kali-linux/)
+
+---
+
 ### Common Commands
 
 - `cd`: Move directories
