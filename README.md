@@ -80,6 +80,46 @@ sudo su
 
 And then entering in your password. Now you will be running commands as the administrator, instead of just a user.
 
+### Errors / Debugging / Issues
+
+#### (initramfs)
+
+##### Activated on reboot
+
+This issue is usually caused by broken OS files. This can be fixed by running a repair on the `(initramfs)` shell that appears.
+
+***Step 1***
+
+```sh
+blkid
+```
+
+***Step 2***
+
+Look for the drive with the `PARTLABEL="kali"` in the output of the previous command (it is usually `sda1` or `sda2`).
+
+***Step 3***
+
+Run this command, but replace the `sda1` with whatever drive you have your OS installed on (the one you previously used in the last step).
+
+```sh
+fsck /dev/sda1 -y
+```
+
+***Step 4***
+
+Restart your computer.
+
+```sh
+reboot
+```
+
+```sh
+exit
+```
+
+Or just manually restart it if both commands do not work.
+
 ### Common Commands
 
 - `cd`: Move directories
