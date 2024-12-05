@@ -26,6 +26,7 @@ body {
   max-width: 1150px;
   margin: 0 auto;
   padding: 2rem;
+  overflow: visible;
 }
 
 /* Improved Typography */
@@ -177,6 +178,7 @@ footer {
 .wrapper {
   display: flex;
   justify-content: space-between;
+  min-height: 100vh;
 }
 
 .main-content {
@@ -192,6 +194,7 @@ footer {
   border: 1px solid var(--border-color);
   border-radius: 5px;
   margin-left: 20px;
+  z-index: 10;
 }
 
 .toc h3 {
