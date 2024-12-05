@@ -173,3 +173,45 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 20px;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.toc {
+  width: 250px;
+  position: sticky;
+  top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.toc h3 {
+  margin-top: 0;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc ul li {
+  margin-bottom: 5px;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.toc ul li a:hover {
+  text-decoration: underline;
+}
