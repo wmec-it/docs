@@ -1,18 +1,16 @@
 ![IT Security Header](https://github.com/user-attachments/assets/62e37d9c-74db-4ead-a9e9-7b223b553b9e)
 
-# Docs
-
-## Kali Linux
+# Kali Linux
 
 ![1Artboard 1kali-header-small](https://github.com/user-attachments/assets/e2ed2fc0-afc1-48ab-8dba-829f7777bf69)
 
 Kali Linux is a very widely used operating system for penetration testing, OSINT, and cyber security in general. Although, like all other linux systems, it is not as user friendly as Windows, or MacOS. We will be learning about it in class, or we may have already learned about it. But Here are gonna be some tips and stuff that I thought I should put on here.	
 
-### Installing
+## Installing
 
 Installing Kali Linux is very easy, especially if you are using a Windows machine, and don’t mind installing it directly to your machine. Using a tool called WSL, you can easily install it with a single command, and access it like a normal app via Windows.
 
-#### WSL
+### WSL
 
 ![wsl-header-smalller](https://github.com/user-attachments/assets/90cb24fd-7073-4583-a193-5c31aaa03559)
 
@@ -22,17 +20,17 @@ To install it via WSL, open up your Command Prompt (CMD), and type:
 wsl --install -d kali-linux
 ```
 
-#### Microsoft Store
+### Microsoft Store
 
 ![1Artboard 1msstore-header-smalller](https://github.com/user-attachments/assets/c8215bb0-b0d9-4ff4-803b-755950b68be0)
 
 Kali Linux can also be downloaded from the Microsoft store. Search up Kali Linux, and download the app. You are done!
 
-#### Virtual Machine
+### Virtual Machine
 
 Using software of your choice (vmware, virtualbox, etc.), you can download the ISO file from Kali Downloads, or you can get the full Virtual Machine already built from Kali Virtual Machines.
 
-##### Downloads
+#### Downloads
 
 - [vmware](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z)
 
@@ -56,11 +54,12 @@ If none of those work, here is the downloads page where they are listed.
 
 ---
 
-### Command Line
+## Command Line
+
 
 The command line is the main area of which Kali Linux is operated, and you should get familiar with it.
 
-#### Sudo
+### Sudo
 
 Sudo is a command used on every Linux distribution. Sudo gives the command you are running administrative privileges. Running `sudo your-command` will elevate it, and run without restrictions. Adding this to the package commands from before, it would look like this: `sudo apt-get install package-name -y`.
 Another use for sudo is elevating every command you run. This can be done by running:
@@ -73,12 +72,12 @@ And then entering in your password. Now you will be running commands as the admi
 
 ---
 
-### Packages
+## Packages
 
 Kali Linux has its own packages like every other Linux distribution, and stores the URLs to the server inside of your `sources.list` file (don’t need to worry about this). Kali Linux lists their packages on their main website here.
 To install these packages, you need to use `apt install package-name` or `apt-get install package-name`. They will sometimes prompt you to say y/n to a question. To bypass this, add `-y` to the end of your command.
 
-#### Search
+### Search
 
 Finding Kali packages are easy, since they are all listed on the official [tools](https://www.kali.org/tools/) page of the [Kali website](https://www.kali.org/).
 
@@ -86,11 +85,11 @@ You can also add package repositories to your `sources.list` file. This allows y
 
 ---
 
-### Errors / Debugging / Issues
+## Errors / Debugging / Issues
 
-#### (initramfs)
+### (initramfs)
 
-##### Activated on reboot
+#### Activated on reboot
 
 This issue is usually caused by broken OS files. This can be fixed by running a repair on the `(initramfs)` shell that appears.
 
@@ -128,17 +127,17 @@ Or just manually restart it if both commands do not work.
 
 ---
 
-### VPN
+## VPN
 
-#### OpenVPN
+### OpenVPN
 
-##### Proton VPN
+#### Proton VPN
 
 [Geeks for Geeks tutorial](https://www.geeksforgeeks.org/virtual-private-network-vpn-setup-in-kali-linux/)
 
 ---
 
-### Common Commands
+## Common Commands
 
 - `cd`: Move directories
 - `ls`: List all files and folders in the current directory
@@ -146,11 +145,11 @@ Or just manually restart it if both commands do not work.
 
 ---
 
-### NetHunter
+## NetHunter
 
 NetHunter is basically Kali linux made for mobile devices.
 
-#### Installation
+### Installation
 
 1. Install [Tow-Bootloader](https://wiki.pine64.org/wiki/PinePhone_Installation_Instructions#Using_Tow-Boot) on your device.
    
@@ -168,15 +167,15 @@ NetHunter is basically Kali linux made for mobile devices.
 
 ---
 
-### Bugs
+## Bugs
 
 [Bug Tracker](https://bugs.kali.org/view_all_bug_page.php?filter=6740a6fac2841)
 
 ---
 
-### Misc
+## Misc
 	
-#### .bashrc
+### .bashrc
 
 `.bashrc` is a file containing instructions for prefixes in the command line. You can add new ones easily, by just adding a new line like this:
 
