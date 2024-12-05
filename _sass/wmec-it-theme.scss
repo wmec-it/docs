@@ -23,7 +23,7 @@ body {
     "Helvetica Neue", 
     sans-serif;
   line-height: 1.6;
-  max-width: 900px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -188,8 +188,8 @@ footer {
   position: sticky;
   top: 20px;
   padding: 15px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   margin-left: 20px;
 }
@@ -199,7 +199,6 @@ footer {
 }
 
 .toc ul {
-  list-style-type: none;
   padding-left: 0;
 }
 
@@ -209,7 +208,6 @@ footer {
 
 .toc ul li a {
   text-decoration: none;
-  color: #333;
 }
 
 .toc ul li a:hover {
