@@ -201,6 +201,22 @@ footer {
   margin-top: 0;
 }
 
+.toc ul {
+  padding-left: 0;
+}
+
+.toc ul li ul {
+  padding-left: 10px;
+}
+
+.toc ul li ul li ul {
+  padding-left: 20px;
+}
+
+.toc ul li ul li ul li ul {
+  padding-left: 30px;
+}
+
 .toc ul li {
   margin-bottom: 5px;
 }
