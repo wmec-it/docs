@@ -1,5 +1,118 @@
 ![IT Security Header](https://github.com/user-attachments/assets/62e37d9c-74db-4ead-a9e9-7b223b553b9e)
 
+# Linux
+
+## Distrobutions
+
+- [Kali Linux](#kali-linux)
+
+## Essential Linux Commands
+
+### Command-Line Utilities
+- **`man`** – View manual pages for commands (e.g., `man ls`).
+- **`whatis`** – Get a one-line description of a command (e.g., `whatis ls`).
+- **`info`** – Another way to view command documentation (e.g., `info ls`).
+- **`--help`** – Get a short help summary for a command (e.g., `ls --help`).
+- **`echo`** – Print text to the terminal (e.g., `echo $PATH`).
+- **`cat`** – View the contents of a file (e.g., `cat file.txt`).
+- **`less` / `more`** – View file contents one page at a time (e.g., `less file.txt`).
+- **`head` / `tail`** – View the beginning or end of a file (e.g., `head -n 10 file.txt`).
+- **`grep`** – Search for a pattern in a file (e.g., `grep 'error' /var/log/syslog`).
+- **`find`** – Search for files in a directory (e.g., `find /home -name "*.txt"`).
+- **`awk`** – Process and analyze text (e.g., `awk '{print $1}' file.txt`).
+- **`sed`** – Stream editor for text manipulation (e.g., `sed 's/foo/bar/' file.txt`).
+- **`cut`** – Cut sections from a file (e.g., `cut -d: -f1 /etc/passwd`).
+- **`sort`** – Sort lines of text (e.g., `sort file.txt`).
+- **`uniq`** – Report or omit repeated lines in a file (e.g., `uniq file.txt`).
+- **`tar`** – Archive files (e.g., `tar -czvf archive.tar.gz /directory`).
+- **`zip` / `unzip`** – Compress and decompress files (e.g., `zip file.zip file.txt`, `unzip file.zip`).
+- **`rsync`** – Synchronize files and directories (e.g., `rsync -av /source /destination`).
+
+### File and Directory Management
+- **`ls`** – List directory contents (e.g., `ls -l`).
+- **`cd`** – Change directory (e.g., `cd /var/log`).
+- **`pwd`** – Print working directory (e.g., `pwd`).
+- **`mkdir`** – Create directories (e.g., `mkdir /newfolder`).
+- **`rmdir`** – Remove empty directories (e.g., `rmdir /emptyfolder`).
+- **`rm`** – Remove files or directories (e.g., `rm file.txt`, `rm -r folder`).
+- **`cp`** – Copy files and directories (e.g., `cp file1.txt file2.txt`).
+- **`mv`** – Move or rename files and directories (e.g., `mv file1.txt newfile.txt`).
+- **`ln`** – Create hard and symbolic links (e.g., `ln -s /path/to/file symlink`).
+
+### Process Management
+- **`ps`** – Show current processes (e.g., `ps aux`).
+- **`top`** / **`htop`** – Interactive process viewer.
+- **`kill`** – Terminate a process by PID (e.g., `kill 1234`).
+- **`killall`** – Kill all processes by name (e.g., `killall firefox`).
+- **`pkill`** – Kill processes by name or other attributes (e.g., `pkill -f 'python'`).
+- **`bg`** – Resume a suspended job in the background.
+- **`fg`** – Bring a background job to the foreground.
+- **`nice`** – Run a command with modified scheduling priority (e.g., `nice -n 10 command`).
+- **`renice`** – Change the priority of running processes (e.g., `renice 10 -p 1234`).
+
+### File Permissions
+- **`chmod`** – Change file permissions (e.g., `chmod 755 file.txt`).
+- **`chown`** – Change file owner and group (e.g., `chown user:group file.txt`).
+- **`chgrp`** – Change group ownership (e.g., `chgrp group file.txt`).
+- **`umask`** – Set default file permissions (e.g., `umask 022`).
+- **`stat`** – Display detailed information about a file or directory (e.g., `stat file.txt`).
+
+### Disk Management
+- **`df`** – Display disk space usage (e.g., `df -h`).
+- **`du`** – Display disk usage of files or directories (e.g., `du -sh /home/user`).
+- **`fdisk`** – Partition table manipulator (e.g., `fdisk /dev/sda`).
+- **`parted`** – Manage disk partitions (e.g., `parted /dev/sda`).
+- **`mkfs`** – Create a file system on a disk partition (e.g., `mkfs.ext4 /dev/sda1`).
+- **`mount`** – Mount a file system (e.g., `mount /dev/sda1 /mnt`).
+- **`umount`** – Unmount a file system (e.g., `umount /mnt`).
+- **`lsblk`** – List information about block devices (e.g., `lsblk`).
+- **`vgcreate`, `lvcreate`, `lvextend`, `lvremove`** – LVM commands to manage volumes and groups.
+
+### Networking
+- **`ip`** – Show/manipulate IP addresses (e.g., `ip a`, `ip link set eth0 up`).
+- **`ifconfig`** – Show or configure network interfaces (e.g., `ifconfig eth0 up`).
+- **`ping`** – Send ICMP echo requests to a host (e.g., `ping 8.8.8.8`).
+- **`traceroute`** – Trace the path packets take to a network host (e.g., `traceroute google.com`).
+- **`nslookup`** – Query DNS information (e.g., `nslookup google.com`).
+- **`netstat`** – Network statistics (e.g., `netstat -tuln`).
+- **`nmap`** – Network exploration tool (e.g., `nmap 192.168.1.1`).
+- **`ss`** – Display socket statistics (e.g., `ss -tuln`).
+- **`route`** – Show or manipulate the IP routing table (e.g., `route -n`).
+- **`nmcli`** – Manage network connections via command line (e.g., `nmcli device show`).
+
+### User and Group Management
+- **`useradd`** – Create a new user (e.g., `useradd john`).
+- **`usermod`** – Modify user information (e.g., `usermod -aG sudo john`).
+- **`userdel`** – Delete a user (e.g., `userdel john`).
+- **`groupadd`** – Create a new group (e.g., `groupadd admin`).
+- **`groupdel`** – Delete a group (e.g., `groupdel admin`).
+- **`passwd`** – Change a user's password (e.g., `passwd john`).
+- **`chage`** – Change user password expiry information (e.g., `chage -l john`).
+- **`whoami`** – Display the current logged-in user (e.g., `whoami`).
+- **`id`** – Display user and group IDs (e.g., `id john`).
+- **`groups`** – Show the groups a user is a member of (e.g., `groups john`).
+
+### System Management
+- **`reboot`** – Reboot the system (e.g., `reboot`).
+- **`shutdown`** – Shutdown or halt the system (e.g., `shutdown -h now`).
+- **`halt`** – Halt the system immediately (e.g., `halt`).
+- **`systemctl`** – Manage systemd services (e.g., `systemctl start apache2`).
+- **`journalctl`** – View logs collected by systemd (e.g., `journalctl -xe`).
+- **`hostnamectl`** – Show or set the system hostname (e.g., `hostnamectl set-hostname newhostname`).
+- **`timedatectl`** – Manage system time and date settings (e.g., `timedatectl set-timezone America/New_York`).
+- **`uptime`** – Show how long the system has been running (e.g., `uptime`).
+
+### Package Management
+- **`apt-get` / `apt`** – Install, update, and remove packages on Debian-based systems (e.g., `apt install package`, `apt remove package`).
+- **`dnf`** – Package manager for Red Hat-based systems (e.g., `dnf install package`).
+- **`rpm`** – Install, query, and remove RPM packages (e.g., `rpm -ivh package.rpm`).
+- **`yum`** – Package manager for older Red Hat-based systems (e.g., `yum install package`).
+
+### Backup and Recovery
+- **`tar`** – Create and extract compressed archives (e.g., `tar -czvf archive.tar.gz folder`).
+- **`dd`** – Copy and convert data (e.g., `dd if=/dev/sda of=/dev/sdb`).
+- **`rsync`** – Sync files and directories (e.g., `rsync -av source/ destination/`).
+
 # Kali Linux
 
 ![1Artboard 1kali-header-small](https://github.com/user-attachments/assets/e2ed2fc0-afc1-48ab-8dba-829f7777bf69)
