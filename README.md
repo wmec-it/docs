@@ -1,10 +1,16 @@
+# West-Mec IT Security Docs
+
 ![IT Security Header](https://github.com/user-attachments/assets/62e37d9c-74db-4ead-a9e9-7b223b553b9e)
 
-# Linux
-
-## Distrobutions
-
+## Table of Contents
+- [Essential Linux Commands](#essential-linux-commands)
 - [Kali Linux](#kali-linux)
+  - [Installation Methods](#installation-methods)
+  - [Command Line Basics](#command-line-basics)
+  - [Package Management](#package-management)
+  - [Troubleshooting](#troubleshooting)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Mobile Applications](#mobile-applications)
 
 ## Essential Linux Commands
 
@@ -113,188 +119,196 @@
 - **`dd`** – Copy and convert data (e.g., `dd if=/dev/sda of=/dev/sdb`).
 - **`rsync`** – Sync files and directories (e.g., `rsync -av source/ destination/`).
 
-# Kali Linux
+## Kali Linux
 
-![1Artboard 1kali-header-small](https://github.com/user-attachments/assets/e2ed2fc0-afc1-48ab-8dba-829f7777bf69)
+![Kali Linux Header](https://github.com/user-attachments/assets/e2ed2fc0-afc1-48ab-8dba-829f7777bf69)
 
-Kali Linux is a very widely used operating system for penetration testing, OSINT, and cyber security in general. Although, like all other linux systems, it is not as user friendly as Windows, or MacOS. We will be learning about it in class, or we may have already learned about it. But Here are gonna be some tips and stuff that I thought I should put on here.	
+Kali Linux is a specialized Linux distribution designed for penetration testing, security auditing, and digital forensics. It comes preinstalled with numerous security tools and utilities that make it the preferred choice for cybersecurity professionals. While it shares the same foundational principles as other Linux distributions, it specifically caters to security-oriented tasks.
 
-## Installing
+### Installation Methods
 
-Installing Kali Linux is very easy, especially if you are using a Windows machine, and don’t mind installing it directly to your machine. Using a tool called WSL, you can easily install it with a single command, and access it like a normal app via Windows.
+Kali Linux can be installed through several methods depending on your requirements and existing setup:
 
-### WSL
+#### Windows Subsystem for Linux (WSL)
 
-![wsl-header-smalller](https://github.com/user-attachments/assets/90cb24fd-7073-4583-a193-5c31aaa03559)
+![WSL Header](https://github.com/user-attachments/assets/90cb24fd-7073-4583-a193-5c31aaa03559)
 
-To install it via WSL, open up your Command Prompt (CMD), and type:
+WSL allows Windows users to run a Linux environment directly on Windows without the overhead of a virtual machine. To install Kali Linux via WSL:
+
+1. Open Command Prompt (CMD) as Administrator
+2. Execute the following command:
+   ```sh
+   wsl --install -d kali-linux
+   ```
+
+#### Microsoft Store
+
+![Microsoft Store Header](https://github.com/user-attachments/assets/c8215bb0-b0d9-4ff4-803b-755950b68be0)
+
+For a simplified installation process:
+
+1. Open the Microsoft Store
+2. Search for "Kali Linux"
+3. Download and install the application
+
+#### Virtual Machine Installation
+
+For a more isolated and complete Kali Linux experience, you can install it as a virtual machine using virtualization software such as VMware, VirtualBox, or Hyper-V.
+
+##### Download Links
+
+Official Virtual Machine Images:
+
+- **VMware**:
+  - [Direct Download](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z)
+  - [Torrent](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z.torrent)
+
+- **VirtualBox**:
+  - [Direct Download](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-virtualbox-amd64.7z)
+  - [Torrent](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-virtualbox-amd64.7z.torrent)
+
+- **Hyper-V**:
+  - [Direct Download](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-hyperv-amd64.7z)
+  - [Torrent](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-hyperv-amd64.7z.torrent)
+
+- **QEMU**:
+  - [Direct Download](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-qemu-amd64.7z)
+  - [Torrent](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-qemu-amd64.7z.torrent)
+
+For additional installation options, refer to the [Official Kali Linux Downloads Page](https://www.kali.org/get-kali/#kali-platforms).
+
+### Command Line Basics
+
+The command line interface is the primary method of interaction with Kali Linux. Mastering key commands will significantly enhance your productivity.
+
+#### Elevating Privileges with Sudo
+
+The `sudo` command allows you to execute commands with administrative privileges:
 
 ```sh
-wsl --install -d kali-linux
+sudo command-name
 ```
 
-### Microsoft Store
+To maintain elevated privileges for multiple commands, use:
 
-![1Artboard 1msstore-header-smalller](https://github.com/user-attachments/assets/c8215bb0-b0d9-4ff4-803b-755950b68be0)
-
-Kali Linux can also be downloaded from the Microsoft store. Search up Kali Linux, and download the app. You are done!
-
-### Virtual Machine
-
-Using software of your choice (vmware, virtualbox, etc.), you can download the ISO file from Kali Downloads, or you can get the full Virtual Machine already built from Kali Virtual Machines.
-
-#### Downloads
-
-- [vmware](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z)
-
-- [vmware TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-vmware-amd64.7z.torrent)
-
-- [VirtualBox](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-virtualbox-amd64.7z)
-
-- [VirtualBox TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-virtualbox-amd64.7z.torrent)
-
-- [Hyper-V](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-hyperv-amd64.7z)
-
-- [Hyper-V TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-hyperv-amd64.7z.torrent)
-
-- [QEMU](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-qemu-amd64.7z)
-
-- [QEMU TORRENT](https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-qemu-amd64.7z.torrent)
-
-If none of those work, here is the downloads page where they are listed.
-
-[Kali Downloads Page](https://www.kali.org/get-kali/#kali-platforms)
-
----
-
-## Command Line
-
-
-The command line is the main area of which Kali Linux is operated, and you should get familiar with it.
-
-### Sudo
-
-Sudo is a command used on every Linux distribution. Sudo gives the command you are running administrative privileges. Running `sudo your-command` will elevate it, and run without restrictions. Adding this to the package commands from before, it would look like this: `sudo apt-get install package-name -y`.
-Another use for sudo is elevating every command you run. This can be done by running:
-
-```bashrc
+```sh
 sudo su
 ```
 
-And then entering in your password. Now you will be running commands as the administrator, instead of just a user.
+This will prompt for your password once and then allow you to run all subsequent commands with administrative privileges.
 
----
+#### Essential Navigation Commands
 
-## Packages
+- `cd` - Change directory
+- `ls` - List files and directories in the current location
+- `mkdir` - Create new directories
 
-Kali Linux has its own packages like every other Linux distribution, and stores the URLs to the server inside of your `sources.list` file (don’t need to worry about this). Kali Linux lists their packages on their main website here.
-To install these packages, you need to use `apt install package-name` or `apt-get install package-name`. They will sometimes prompt you to say y/n to a question. To bypass this, add `-y` to the end of your command.
+### Package Management
 
-### Search
+Kali Linux uses the APT package management system for installing, updating, and removing software packages.
 
-Finding Kali packages are easy, since they are all listed on the official [tools](https://www.kali.org/tools/) page of the [Kali website](https://www.kali.org/).
+#### Installing Packages
 
-You can also add package repositories to your `sources.list` file. This allows you to get packages from other sources such as Ubuntu's packages.
-
----
-
-## Errors / Debugging / Issues
-
-### (initramfs)
-
-#### Activated on reboot
-
-This issue is usually caused by broken OS files. This can be fixed by running a repair on the `(initramfs)` shell that appears.
-
-***Step 1***
+To install a package:
 
 ```sh
-blkid
+sudo apt install package-name
 ```
 
-***Step 2***
-
-Look for the drive with the `PARTLABEL="kali"` in the output of the previous command (it is usually `sda1` or `sda2`).
-
-***Step 3***
-
-Run this command, but replace the `sda1` with whatever drive you have your OS installed on (the one you previously used in the last step).
+or
 
 ```sh
-fsck /dev/sda1 -y
+sudo apt-get install package-name
 ```
 
-***Step 4***
-
-Restart your computer.
+To automatically confirm all prompts during installation, add the `-y` flag:
 
 ```sh
-reboot
+sudo apt install package-name -y
 ```
 
-```sh
-exit
-```
+#### Finding Packages
 
-Or just manually restart it if both commands do not work.
+Browse available packages on the [official Kali Linux Tools page](https://www.kali.org/tools/).
 
----
+You can also configure additional package repositories by modifying the `/etc/apt/sources.list` file to access packages from other Linux distributions.
 
-## VPN
+### Troubleshooting
 
-### OpenVPN
+#### Resolving (initramfs) Boot Issues
 
-#### Proton VPN
+If your system boots to an `(initramfs)` prompt, follow these steps to repair the filesystem:
 
-[Geeks for Geeks tutorial](https://www.geeksforgeeks.org/virtual-private-network-vpn-setup-in-kali-linux/)
-
----
-
-## Common Commands
-
-- `cd`: Move directories
-- `ls`: List all files and folders in the current directory
-- `mkdir`: Make directory
-
----
-
-## NetHunter
-
-NetHunter is basically Kali linux made for mobile devices.
-
-### Installation
-
-1. Install [Tow-Bootloader](https://wiki.pine64.org/wiki/PinePhone_Installation_Instructions#Using_Tow-Boot) on your device.
-   
-2. Write the image to your MicroSD card, e.g.
-   
+1. At the `(initramfs)` prompt, identify your system partitions:
    ```sh
-   sudo dd if=IMAGE.img of=/dev/[DEVICE] bs=1M status=progress conv=fsync
+   blkid
    ```
-   
-3. Insert the MicroSD card into your device.
-   
-4. Boot your device from MicroSD card (hold Volume down key until the LED turns blue).
-   
-5. Login with user `kali` and password `1234`.
 
----
+2. Locate the partition with `PARTLABEL="kali"` (typically `/dev/sda1` or `/dev/sda2`)
 
-## Bugs
+3. Repair the filesystem:
+   ```sh
+   fsck /dev/sda1 -y
+   ```
+   (Replace `sda1` with your actual system partition)
 
-[Bug Tracker](https://bugs.kali.org/view_all_bug_page.php?filter=6740a6fac2841)
+4. Restart your system:
+   ```sh
+   reboot
+   ```
+   or
+   ```sh
+   exit
+   ```
 
----
+### Advanced Configuration
 
-## Misc
-	
-### .bashrc
+#### Customizing Shell with .bashrc
 
-`.bashrc` is a file containing instructions for prefixes in the command line. You can add new ones easily, by just adding a new line like this:
+The `.bashrc` file allows you to customize your command line environment. Add command aliases to simplify complex operations:
 
-```bashrc
+```sh
+# Add to your ~/.bashrc file:
 alias cls='clear'
 ```
 
-This allows you to type in cls to run the clear command. You can do the same with longer commands, therefore expediting the process of running scans, or compiling files.
-This is the same throughout all Linux distributions, so remember this.
+After editing the file, apply changes with:
+
+```sh
+source ~/.bashrc
+```
+
+### VPN Configuration
+
+#### Setting Up OpenVPN with Proton VPN
+
+For detailed instructions on configuring a VPN in Kali Linux, refer to the [Geeks for Geeks tutorial](https://www.geeksforgeeks.org/virtual-private-network-vpn-setup-in-kali-linux/).
+
+### Mobile Applications
+
+#### NetHunter
+
+NetHunter is the mobile variant of Kali Linux designed for Android devices and specialized hardware.
+
+##### Installation Instructions
+
+1. Install [Tow-Bootloader](https://wiki.pine64.org/wiki/PinePhone_Installation_Instructions#Using_Tow-Boot) on your device
+
+2. Write the NetHunter image to your MicroSD card:
+   ```sh
+   sudo dd if=IMAGE.img of=/dev/[DEVICE] bs=1M status=progress conv=fsync
+   ```
+
+3. Insert the MicroSD card into your device
+
+4. Boot from the MicroSD card by holding the Volume Down key until the LED turns blue
+
+5. Login with default credentials:
+   - Username: `kali`
+   - Password: `1234`
+
+### Additional Resources
+
+#### Bug Tracking and Support
+
+Report and track bugs via the [Official Kali Linux Bug Tracker](https://bugs.kali.org/view_all_bug_page.php?filter=6740a6fac2841).
