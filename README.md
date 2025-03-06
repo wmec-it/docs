@@ -4,6 +4,16 @@
 
 ## Table of Contents
 - [Essential Linux Commands](#essential-linux-commands)
+  - [Command-Line Utilities](#command-line-utilities)
+  - [File and Directory Management](#file-and-directory-management)
+  - [Process Management](#process-management)
+  - [File Permissions](#file-permissions)
+  - [Disk Management](#disk-management)
+  - [Networking](#networking)
+  - [User and Group Management](#user-and-group-management)
+  - [System Management](#system-management)
+  - [Package Management](#package-management)
+  - [Backup and Recovery](#backup-and-recovery)
 - [Kali Linux](#kali-linux)
   - [Installation Methods](#installation-methods)
   - [Command Line Basics](#command-line-basics)
