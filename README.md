@@ -27,6 +27,9 @@
 ![Bash](./assets/images/bash.png)
 
 ### Command-Line Utilities
+
+![Tools](./assets/images/tools_200.png)
+
 - **`man`** – View manual pages for commands (e.g., `man ls`).
 - **`whatis`** – Get a one-line description of a command (e.g., `whatis ls`).
 - **`info`** – Another way to view command documentation (e.g., `info ls`).
