@@ -50,6 +50,9 @@
 - **`rsync`** – Synchronize files and directories (e.g., `rsync -av /source /destination`).
 
 ### File and Directory Management
+
+![](./assets/images/files-folders_200.png)
+
 - **`ls`** – List directory contents (e.g., `ls -l`).
 - **`cd`** – Change directory (e.g., `cd /var/log`).
 - **`pwd`** – Print working directory (e.g., `pwd`).
@@ -61,6 +64,9 @@
 - **`ln`** – Create hard and symbolic links (e.g., `ln -s /path/to/file symlink`).
 
 ### Process Management
+
+![](./assets/images/process_200.png)
+
 - **`ps`** – Show current processes (e.g., `ps aux`).
 - **`top`** / **`htop`** – Interactive process viewer.
 - **`kill`** – Terminate a process by PID (e.g., `kill 1234`).
