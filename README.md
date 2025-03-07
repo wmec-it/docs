@@ -78,6 +78,9 @@
 - **`renice`** – Change the priority of running processes (e.g., `renice 10 -p 1234`).
 
 ### File Permissions
+
+![](./assets/images/permissions_200.png)
+
 - **`chmod`** – Change file permissions (e.g., `chmod 755 file.txt`).
 - **`chown`** – Change file owner and group (e.g., `chown user:group file.txt`).
 - **`chgrp`** – Change group ownership (e.g., `chgrp group file.txt`).
