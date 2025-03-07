@@ -24,6 +24,8 @@
 
 ## Essential Linux Commands
 
+![Bash](./assets/images/bash.png)
+
 ### Command-Line Utilities
 - **`man`** – View manual pages for commands (e.g., `man ls`).
 - **`whatis`** – Get a one-line description of a command (e.g., `whatis ls`).
